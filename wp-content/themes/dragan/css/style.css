@@ -1,0 +1,483 @@
+/*default css start*/
+* {
+    outline: none;
+}
+body {
+    margin: 0;
+    padding: 0;
+    color: #231f20;
+    font-size: 14px;
+}
+a:hover {
+    text-decoration: none;
+}
+input:focus
+button:focus,
+a:focus {
+    outline: none;
+    box-shadow: none;
+}
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+a {
+    color: #231f20;
+    text-decoration: none;
+}
+/*default css end*/
+
+/* header css start */
+header{
+    padding: 30px 0;
+    background-color: #000;
+}
+header .logo a h1{
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    line-height: 28px;
+    color: #fff;
+    font-weight: 600;
+    margin: 0;
+}
+.m-menu{
+    display: none;
+}
+.menu ul.mobile-menu{
+    display: none;
+}
+.menu{
+    padding-left: 25px;
+}
+.menu ul{
+    padding: 0;
+    margin: 0;
+    text-align: right;
+}
+.menu ul li{
+    display: inline-block;
+    list-style-type: none;
+}
+.menu ul li a{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    color: #fff;
+    margin: 0 22px;
+}
+/* header css end */
+
+/* banner css start */
+.banner{
+    position: relative;
+}
+.banner-content{
+    position: absolute;
+    top: 90px;
+    padding: 25px 0;
+    left: 0;
+    right: 0;
+}
+.banner-text{
+    width: 40%;
+}
+.banner-content h2{
+    font-family: 'Roboto', sans-serif;
+    font-size: 44px;
+    line-height: 54px;
+    color: #202020;
+    font-weight: 900;
+    margin: 0 0 30px;
+}
+.banner-content p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 28px;
+    color: #202020;
+    margin: 0;
+}
+/* banner css end */
+
+/* movies css start */
+.movies{
+    padding-top: 80px;
+}
+.category-title{
+    display: block;
+    overflow: hidden;
+    margin-bottom: 35px;
+}
+.category-title .section-title{
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    line-height: 44px;
+    color: #202020;
+    font-weight: 600;
+    display: inline-block;
+    margin: 0;
+}
+.category-title .yellow-btn{
+    float: right;
+}
+.yellow-btn{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 20px;
+    color: #000;
+    font-weight: 600;
+    padding: 18px;
+    width: 175px;
+    background-color: #fac900;
+    display: block;
+    text-align: center;
+    border-radius: 0;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s ease all;
+    z-index: 1;
+}
+.yellow-btn:hover{
+    color: #000;
+}
+.yellow-btn:after {
+    height: 100%;
+    width: 100%;
+    background: #000;
+    content: "";
+    position: absolute;
+    left: -115%;
+    top: 0;
+    transform: skew(40deg);
+    opacity: 0.2;
+    z-index: -1;
+    transition: 0.3s ease all;
+}
+.yellow-btn:hover:after {
+    transition: 0.3s ease all;
+    left: -60%;
+}
+.category-box{
+    display: block;
+    overflow: hidden;
+}
+.category-box img{
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 30px; 
+}
+.category-box h3{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+    color: #202020;
+    font-weight: 600;
+    display: inline-block;
+    width: 73%;
+    float: left;
+    padding-right: 10px;
+}
+.category-box h4{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    line-height: 32px;
+    color: #202020;
+    font-weight: 600;
+    display: inline-block;
+    width: 25%;
+    float: right;
+}
+.category-box h4 i{
+    color: #fac900;
+    font-size: 18px;
+}
+/* movies css end */
+
+/* books css start */
+.books{
+    padding-top: 80px;
+}
+/* books css end */
+
+/* games css start */
+.games{
+    padding-top: 80px;
+}
+/* games css end */
+
+/* footer css start */
+footer{
+    padding: 80px 0 65px;
+    background-color: #000;
+    margin-top: 80px;
+}
+.top-footer{
+    padding-bottom: 60px;
+}
+.top-footer h3{
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    line-height: 30px;
+    color: #fff;
+    font-weight: 600;
+    margin: 0 0 20px;
+    text-align: left;
+}
+.top-footer ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.top-footer ul li a{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 30px;
+    color: #fff;
+}
+.top-footer .newsletter{
+    display: block;
+    overflow: hidden;
+    text-align: end;
+    padding-left: 120px;
+}
+.top-footer .newsletter input{
+    padding: 10px 15px;
+    border-radius: 3px;
+    border: none;
+    width: 89%;
+    height: 44px;
+    float: left;
+}
+.top-footer .newsletter button{
+    padding: 10px 16px;
+    border: none;
+    border-radius: 3px;
+    background-color: #fac900;
+    color: #000;
+    font-size: 14px;
+    margin-left: 2px;
+    height: 44px;
+}
+.top-footer .newsletter button:focus{
+    outline: none;
+}
+.bottom-footer p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+    margin-bottom: 0;
+}
+/* footer css end */
+
+/* ..... MOVIES PAGE ..... CSS */
+.movie-page-content{
+    padding-top: 95px;
+}
+h2.page-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 42px;
+    line-height: 44px;
+    color: #202020;
+    font-weight: 900;
+    display: block;
+    margin: 0 0 75px;
+    text-align: center;
+}
+.page-side-category h3{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    color: #202020;
+    font-weight: 600;
+    display: block;
+    margin: 0 0 30px;
+}
+.page-side-category ul{
+    padding-left: 15px;
+    list-style-type: none;
+}
+.page-side-category ul li a{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #202020;
+    display: block;
+    font-weight: 500;
+    margin: 0 0 8px;
+}
+.page-side-category ul li a:hover{
+    color: #fac900;
+}
+.movie-page-content .category-box img {
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+.cotegory-par{
+    display: block;
+    overflow: hidden;
+    float: left;
+}
+.cotegory-par p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #202020;
+    margin-bottom: 40px;
+}
+.section-pagination{
+    margin-top: 40px;
+}
+.section-pagination .page-link{
+    background-color: #f5f5f5;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    margin-right: 10px;
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+.section-pagination .page-item.active .page-link{
+    background-color: #fac900;
+    color: #000;
+    border-color: #fac900;
+}
+
+/* ..... Movies Individual PAGE CSS ..... */
+.movies-individual-content {
+    padding-top: 95px;
+}
+.movies-individual-content h2.page-title{
+    text-align: left;
+}
+.movies-individual-part h3,
+h3.movie-rate{
+    font-family: 'Roboto', sans-serif;
+    font-size: 42px;
+    line-height: 44px;
+    color: #202020;
+    font-weight: 900;
+    display: block;
+    margin: 0 0 75px;
+    text-align: right;
+}
+.movies-individual-part h3 i,
+h3.movie-rate i{
+    color: #fac900;
+    font-size: 36px;
+}
+.movies-individual-content .individual-box a img {
+    margin-bottom: 30px;
+}
+
+/* ..... Blog PAGE CSS ..... */
+.blog-page-content {
+    padding-top: 95px;
+}
+.blog-box a img{
+    margin-bottom: 30px;
+}
+.blog-box h3{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    color: #fac900;
+    margin-bottom: 8px;
+}
+.blog-box h4{
+    font-family: 'Roboto', sans-serif;
+    font-size: 34px;
+    line-height: 40px;
+    color: #202020;
+    font-weight: 600;
+    display: block;
+    margin: 0 0 30px;
+}
+.blog-box p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 32px;
+    color: #202020;
+    margin-bottom: 30px;
+}
+
+/* ..... Blog Individual PAGE CSS ..... */
+.blog-individual-content {
+    padding-top: 95px;
+}
+.blog-individual-content h2.page-title{
+    text-align: left;
+}
+.individual-box a img{
+    margin-bottom: 15px;
+}
+.individual-box h3{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    color: #fac900;
+    margin-bottom: 35px;
+}
+.individual-box p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 32px;
+    color: #202020;
+    margin-bottom: 35px;
+}
+.post-comment{
+    width: 50%;
+}
+.post-comment h4{
+    font-family: 'Roboto', sans-serif;
+    font-size: 36px;
+    line-height: 40px;
+    color: #202020;
+    font-weight: 900;
+    display: block;
+    margin: 95px 0 35px;
+}
+.post-comment .form-group {
+    margin-bottom: 25px;
+}
+.post-comment input,
+.post-comment textarea{
+    background-color: #f5f5f5;
+    border: 1px solid #e2e2e2;
+    padding: 28px 25px;
+    display: block;
+    color: #000;
+}
+.post-comment textarea{
+    padding: 15px 25px;
+}
+.post-comment .form-control:focus{
+    color: #000;
+    box-shadow: none;
+    border: 1px solid #e2e2e2;
+    background-color: #f5f5f5; 
+}
+.post-comment .yellow-btn{
+    border-radius: 4px;
+    width: 100%
+}
+
+/* ..... About PAGE ..... CSS */
+.about-content {
+    padding-top: 95px;
+}
+.about-content h2.page-title{
+    text-align: left;
+    margin: 0 0 55px;
+}
+.about-text{
+    margin-left: 20%;
+}
+.about-content p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 32px;
+    color: #202020;
+    margin-bottom: 25px;
+}

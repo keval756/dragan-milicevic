@@ -8,29 +8,27 @@
  *
  * @package dragan-test
  */
-
 ?>
-
-	</div><!-- #content -->
-
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'dragan' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'dragan' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'dragan' ), 'dragan', '<a href="http://underscores.me/">Keval</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
-
+<footer>
+    <div class="container">
+        <div class="top-footer">
+            <div class="row">
+                <div class="col-sm-3 col-6">
+                    <?php dynamic_sidebar('footer-1'); ?>
+                </div>
+                <div class="col-sm-3 col-6">
+                    <?php dynamic_sidebar('footer-2'); ?>
+                </div>
+                <div class="col-sm-6 col-12">
+                	<?php dynamic_sidebar('footer-3'); ?>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-footer">
+            <p>© <?php echo date('Y'); ?>, All Right Reserved.</p>
+        </div>
+    </div>
+ </footer>
 <?php wp_footer(); ?>
-
 </body>
 </html>

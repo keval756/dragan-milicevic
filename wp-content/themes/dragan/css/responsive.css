@@ -1,0 +1,378 @@
+@media(max-width:1200px){
+
+    /* ..... HOME PAGE CSS ..... */
+    .banner-content {
+        position: absolute;
+        top: 20px;
+        padding: 25px 0;
+        left: 0;
+        right: 0;
+    }
+    .banner-text {
+        width: 55%;
+    }
+    .category-box h3{
+        font-size: 18px;
+        line-height: 26px;
+    }
+    .category-box h4{
+        font-size: 18px;
+    }
+    .category-box h4 i{
+        font-size: 16px;
+    }
+    .top-footer .newsletter input {
+        width: 86%;
+    }
+
+}
+
+@media(max-width:991px){
+
+    /* ..... HOME PAGE CSS ..... */
+    .des-menu{
+        display: none;
+    }
+    .m-menu{
+        display: block;
+    }
+    header .logo{
+        display: inline-block;
+        float: left;
+    }
+    #showRight {
+        background-color: inherit;
+        border: none;
+        display: inline-block;
+        cursor: pointer;
+        height: 30px;
+        width: 40px;
+        position: absolute;
+        right: 0;
+    }
+    #showRight .bar {
+        top: 10px;
+        right: 20px;
+    }
+    #showRight .bar:before {
+        position: absolute;
+        content: '';
+        top: 10px;
+        left: 0;
+    }
+    #showRight .bar:after {
+        position: absolute;
+        content: '';
+        top: -10px;
+        left: 0;
+    }
+    #showRight .bar, #showRight .bar:before, #showRight .bar:after {
+        display: block;
+        position: absolute;
+        width: 35px;
+        height: 4px;
+        background-color: #fff;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        border-radius: 10px;
+    }
+    .active#showRight{
+        position: absolute;
+        right: 200px;
+    }
+    button:focus{
+        outline: none;
+    }
+    .active#showRight .bar {
+        background-color: transparent;	
+    }
+    .active#showRight .bar:before {
+        top: 0;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);	
+    }
+    .active#showRight .bar:after {
+        top: 0;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);	
+    }
+    .banner-text {
+        width: 70%;
+    }
+    .banner-content h2 {
+        font-size: 38px;
+        line-height: 50px;
+        margin: 0 0 20px;
+    }
+    .banner-content p {
+        font-size: 16px;
+        line-height: 26px;
+    }
+    .movies,
+    .books,
+    .games{
+        padding-top: 60px;
+    }
+    .category-title .section-title {
+        font-size: 36px;
+    }
+    .yellow-btn {
+        font-size: 16px;
+        padding: 15px;
+    }
+    .category-box img {
+        margin-bottom: 15px;
+    }
+    .category-box h3 {
+        font-size: 16px;
+        line-height: 22px;
+        display: block;
+        width: 100%;
+        float: none;
+        padding-right: 0;
+        margin-bottom: 12px;
+    }
+    .category-box h4 {
+        font-size: 16px;
+        line-height: 22px;
+        display: block;
+        width: 100%;
+        float: none;
+        margin-bottom: 12px;
+    }
+    .category-box h4 i {
+        font-size: 14px;
+    }
+    footer {
+        padding: 60px 0 40px;
+        margin-top: 60px;
+    }
+    .top-footer {
+        padding-bottom: 35px;
+    }
+    .top-footer h3 {
+        font-size: 20px;
+        line-height: 28px;
+        margin: 0 0 15px;
+    }
+    .top-footer .newsletter {
+        padding-left: 70px;
+    }
+    .top-footer .newsletter input {
+        width: 82%;
+    }
+
+    /* ..... MOVIES PAGE ..... CSS */
+
+    .movie-page-content {
+        padding-top: 65px;
+    }
+    h2.page-title {
+        font-size: 36px;
+        line-height: 40px;
+        margin: 0 0 45px;
+    }
+    .cotegory-par p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    /* ..... MOVIES INDIVIDUAL PAGE ..... CSS */
+
+    .movies-individual-content {
+        padding-top: 65px;
+    }
+    .movies-individual-content h2.page-title{
+        font-size: 30px;
+        line-height: 36px;
+    }
+    h3.movie-rate{
+        font-size: 30px;
+        line-height: 36px;
+        margin: 0 0 25px;
+    }
+    h3.movie-rate i{
+        font-size: 26px;
+    }
+
+    /* ..... BLOG PAGE ..... CSS */
+
+    .blog-page-content {
+        padding-top: 65px;
+    }
+    .blog-box h4 {
+        font-size: 30px;
+        line-height: 36px;
+    }
+
+    /* ..... BLOG INDIVIDUAL PAGE ..... CSS */
+
+    .blog-individual-content {
+        padding-top: 65px;
+    }
+    .post-comment {
+        width: 65%;
+    }
+    .post-comment h4 {
+        font-size: 30px;
+        line-height: 36px;
+        margin: 70px 0 30px;
+    }
+    .post-comment .form-group {
+        margin-bottom: 18px;
+    }
+
+    /* ..... ABOUT PAGE ..... CSS */
+
+    .about-content {
+        padding-top: 65px;
+    }
+    .about-content h2.page-title {
+        margin: 0 0 45px;
+    }
+    .about-text {
+        margin-left: 0;
+    }
+
+}
+
+@media(max-width:767px){
+
+    /* ... HOME PAGE CSS ... */
+    .banner-content {
+        top: 50px;
+    }
+    .banner-img img{
+        height: 100%;
+    }
+    .banner-text {
+        width: 100%;
+    }
+    .category-title {
+        margin-bottom: 25px;
+    }
+    .yellow-btn {
+        width: 100%;
+    }
+    .category-box img {
+        margin-bottom: 30px;
+    }
+    footer {
+        padding: 40px 0 40px;
+    }
+    .top-footer .newsletter {
+        padding-left: 0;
+        margin-top: 40px;
+        text-align: left;
+    }
+    .top-footer .newsletter input {
+        width: 100%;
+    }
+    .top-footer .newsletter button {
+        margin-left: 0;
+        width: 100%;
+        margin-top: 8px;
+    }
+
+    /* ..... MOVIES PAGE ..... CSS */
+
+    h2.page-title {
+        margin: 0 0 35px;
+    }
+    .mobile-drop-category {
+        margin-bottom: 25px;
+    }
+    .mobile-drop-category .navbar{
+        padding: 0;
+    }
+    .mobile-drop-category .navbar-header{
+        width: 100%;
+    }
+    .mobile-drop-category .navbar-header button{
+        width: 100%;
+        background-color: #f5f5f5;
+        border: 1px solid #e1e1e1;
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        line-height: 24px;
+        color: #202020;
+        font-weight: 600;
+        display: block;
+        padding: 10px 20px;
+        text-align: left;
+    }
+    .mobile-drop-category .navbar-header button i{
+        font-size: 12px;
+        float: right;
+        line-height: 24px;
+    }
+    .mobile-drop-category .navbar-header button .plus{
+        display: none;
+    }
+    .mobile-drop-category .navbar-header button.collapsed .plus{
+        display: inline;
+    }
+    .mobile-drop-category .navbar-header button.collapsed .minus{
+        display: none;
+    }
+    .mobile-drop-category ul{
+        padding: 25px 20px;
+    }
+    .mobile-drop-category ul li a{
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        line-height: 24px;
+        color: #202020;
+        display: block;
+        font-weight: 500;
+        margin: 0 0 8px;
+    }
+    .category-box h3 {
+        font-size: 20px;
+        line-height: 30px;
+        display: inline-block;
+        width: 73%;
+        float: left;
+        padding-right: 10px;
+    }
+    .category-box h4 {
+        font-size: 20px;
+        line-height: 32px;
+        display: inline-block;
+        width: 25%;
+        float: right;
+    }
+    .cotegory-par p {
+        font-size: 17px;
+        line-height: 22px;
+    }
+    .section-pagination {
+        margin-top: 15px;
+    }
+
+    /* ..... BLOG INDIVIDUAL PAGE ..... CSS */
+
+    .movies-individual-content h2.page-title{
+        font-size: 36px;
+        line-height: 45px;
+    }
+    .movies-individual-part .individual-box h3{
+        font-size: 36px;
+        line-height: 45px;
+        color: #202020;
+        text-align: left;
+        margin: 35px 0 15px;
+    }
+    .movies-individual-part .individual-box h3 i{
+        font-size: 32px;
+    }
+
+    /* ..... BLOG INDIVIDUAL PAGE ..... CSS */
+
+    .blog-individual-content h2.page-title {
+        margin-top: 30px;
+    }
+    .post-comment {
+        width: 100%;
+    }
+}
