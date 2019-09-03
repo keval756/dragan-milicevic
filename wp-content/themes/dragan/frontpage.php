@@ -15,18 +15,24 @@
 get_header();
 ?>
 <section class="blog-individual-content">
-    <div class="container">
-        <div class="row">
-			<?php
-			while ( have_posts() ) :
-				the_post();
+        <div class="container">
+            <div class="row">
+		<?php
+		while ( have_posts() ) :
+			the_post();
 
-				get_template_part( 'template-parts/content', 'page' );
+			the_content();
 
-			endwhile; // End of the loop.
-			?>
+
+		endwhile; // End of the loop.
+		?>
+
+
+            </div>
+
         </div>
-    </div>
-</section>
+
+    </section>
+
 <?php
 get_footer();

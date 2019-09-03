@@ -217,7 +217,6 @@ if ( class_exists( 'WooCommerce' ) ) {
  * Our Custom Function will be here
  */
 
-
 add_action( 'tgmpa_register', 'dragan_register_required_plugins' );
 
 /**
@@ -291,3 +290,172 @@ function dragan_register_required_plugins() {
 
 	tgmpa( $plugins, $config );
 }
+
+// Theme customizer function
+add_action( 'customize_register', 'dragan_customizer_settings' );
+function dragan_customizer_settings( $wp_customize ) {
+	$wp_customize->add_section( 'custom_banner' , array(
+	    'title'      => 'Banner',
+	    'priority'   => 30,
+     ) );
+
+	$wp_customize->add_setting( 'header_display' , array(
+        'transport'   => 'refresh',
+     ) );
+
+    $wp_customize->add_setting( 'header_image' , array(
+        'transport'   => 'refresh',
+     ) );
+
+    $wp_customize->add_setting( 'header_title' , array(
+        'transport'   => 'refresh',
+     ) );
+
+    $wp_customize->add_setting( 'banner_description' , array(
+        'transport'   => 'refresh',
+     ) );
+
+    $wp_customize->add_control(
+    new WP_Customize_Control(
+        $wp_customize,
+        'header_display',
+        array(
+            'label'          => __( 'Homepage or All', 'dragan' ),
+            'section'        => 'custom_banner',
+            'settings'       => 'header_display',
+            'type'           => 'radio',
+            'choices'        => array(
+                'home'   => __( 'Home' ),
+                'all'  => __( 'All' )
+            )
+        )
+      )
+    );
+
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'header_image', array(
+		'label'        => 'Image',
+		'section'    => 'custom_banner',
+		'settings'   => 'header_image',
+    ) ) );
+   
+     $wp_customize->add_control( 'header_title', array(
+       'label' => 'Title',
+       'section'	=> 'custom_banner',
+       'type'	 => 'text',
+     ) );
+
+     $wp_customize->add_control( 'banner_description', array(
+	  'type' => 'textarea',
+	  'section' => 'custom_banner', // // Add a default or your own section
+	  'label' => __( 'Banner Text' ),
+	  'description' => __( 'This is a custom textarea.' ),
+	) );
+}
+//Custom Moview Post Type
+add_action( 'init', 'movies_items' );
+function movies_items() {
+    register_post_type( 'movies_items',
+        array(
+            'labels' => array(
+                'name' => __( 'Movies' ),
+                'singular_name' => __( 'Movies' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'supports' => array('title','thumbnail','editor' ),
+            'menu_icon'   => 'dashicons-book-alt',
+            'rewrite' => array('slug' => 'movies_items'),
+        )
+    );
+}
+//register category Moview
+add_action('init', 'create_movies_category');
+function create_movies_category() {
+    $args = array( 
+        'hierarchical' => true,
+        'label' => 'Category',
+    );
+    register_taxonomy( 'movies_category', array('movies_items'), $args );
+}
+
+//Custom Books Post Type
+add_action( 'init', 'books_items' );
+function books_items() {
+    register_post_type( 'books_items',
+        array(
+            'labels' => array(
+                'name' => __( 'Books' ),
+                'singular_name' => __( 'Books' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'supports' => array('title','thumbnail','editor' ),
+            'menu_icon'   => 'dashicons-book-alt',
+            'rewrite' => array('slug' => 'books_items'),
+        )
+    );
+}
+//register category Moview
+add_action('init', 'create_books_category');
+function create_books_category() {
+    $args = array( 
+        'hierarchical' => true,
+        'label' => 'Category',
+    );
+    register_taxonomy( 'books_category', array('books_items'), $args );
+}
+
+//Custom Games Post Type
+add_action( 'init', 'games_items' );
+function games_items() {
+    register_post_type( 'games_items',
+        array(
+            'labels' => array(
+                'name' => __( 'Games' ),
+                'singular_name' => __( 'Games' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'supports' => array('title','thumbnail','editor' ),
+            'menu_icon'   => 'dashicons-book-alt',
+            'rewrite' => array('slug' => 'games_items'),
+        )
+    );
+}
+//register category Moview
+add_action('init', 'create_games_category');
+function create_games_category() {
+    $args = array( 
+        'hierarchical' => true,
+        'label' => 'Category',
+    );
+    register_taxonomy( 'games_category', array('games_items'), $args );
+}
+
+//Add custom image size
+add_image_size( 'post-image', 255, 380, true ); 
+add_image_size( 'single-post-image', 825, 430, true ); 
+
+// create shortcode for custompost type
+function movies(){
+        ob_start();
+        get_template_part('template-parts/movies_shortcode');
+        return ob_get_clean();  
+}
+add_shortcode('movies_type', 'movies');
+
+// create shortcode for custompost type
+function books(){
+        ob_start();
+        get_template_part('template-parts/books_shortcode');
+        return ob_get_clean();  
+}
+add_shortcode('books_type', 'books');
+
+// create shortcode for custompost type
+function games(){
+        ob_start();
+        get_template_part('template-parts/games_shortcode');
+        return ob_get_clean();  
+}
+add_shortcode('games_type', 'games');

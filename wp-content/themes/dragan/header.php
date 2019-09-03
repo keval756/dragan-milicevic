@@ -29,7 +29,7 @@
                         <?php
 							the_custom_logo();
 							?>
-						 <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+						 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><h1><?php bloginfo( 'name' ); ?></h1></a>
                     </div>
                     <div class="m-menu">
                         <div class="main-home-menu">
@@ -68,4 +68,18 @@
             </div>
         </div>
     </header>
-
+  <?php if(get_theme_mod( 'header_display' ) == 'all') {  ?>
+    <section class="banner">
+        <div class="banner-img">
+            <img src="<?php echo get_theme_mod( 'header_image' ); ?>" class="img-fluid">
+        </div>
+        <div class="banner-content">
+            <div class="container">
+                <div class="banner-text">
+                    <h2><?php echo get_theme_mod( 'header_title' ); ?></h2>
+                    <p><?php echo get_theme_mod( 'banner_description' ); ?></p>
+                </div>
+            </div>
+        </div>
+    </section>
+<?php } ?>
